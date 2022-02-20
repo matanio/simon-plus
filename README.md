@@ -4,7 +4,7 @@ Simon+ is a game based on the popular sequence game Simon. This website is stric
 
 This is simply a step in my software engineering journey!
 As someone who has only dealt with Javascript, HTML and CSS in small batches, I wanted to see what I could create using the popular framweorks and libraries of Vue.js and Tailwind.css.
-I will be updating and maintaining Simon+ as time goes, and hopefully you enjoy oplaying it as much as I enjoyed making it!
+I will be updating and maintaining Simon+ as time goes, and hopefully you enjoy playing it as much as I enjoyed making it!
 
 ## For developers
 
