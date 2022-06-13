@@ -6,6 +6,8 @@ This is simply a step in my software engineering journey!
 As someone who has only dealt with Javascript, HTML and CSS in small batches, I wanted to see what I could create using the popular framweorks and libraries of Vue.js and Tailwind.css.
 I will be updating and maintaining Simon+ as time goes, and hopefully you enjoy playing it as much as I enjoyed making it!
 
+**Please note**: This is currently NOT working on mobile devices. 
+
 ## For developers
 
 Clone the repository and install dependencies with npm. This project requires node.js 14 or 15.
