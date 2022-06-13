@@ -1,19 +1,20 @@
 <template>
- <div class="text-blue-500 z-50 absolute grid font-bold content-center ml-10 m-auto text-2xl slide-in">
+  <!-- Popup Message -->
+  <div class="text-blue-500 z-50 absolute grid font-bold content-center ml-10 m-auto text-2xl slide-in">
     {{text}}
-</div>
+  </div>
 </template>
 
 
 <script>
 
 export default {
-  name: 'GameInfo',  
+  name: 'GameMessage',  
   props: {
-      text:{
-          required: true,
-          type: String,
-      }
+    text:{
+      required: true,
+      type: String,
+    }
   }
 }
 </script>

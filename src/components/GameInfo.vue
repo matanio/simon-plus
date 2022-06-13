@@ -4,11 +4,11 @@
     <div :class="(modeColor=='again')? 'border-red-400 text-red-500' : 'border-blue-400 text-blue-500'" class="border-4  font-bold text-2xl text-center m-auto  -mt-4 rounded w-3/4 bg-white">
        {{title}}
     </div>
-    <div class="text-lg text-white text-center m-auto  ">
+    <div class="text-lg text-white text-center m-auto">
         {{info}}
     </div>
     <div  @click="$emit('clicked')" :class="(modeColor=='again')? ' text-red-500' : 'text-blue-500'" class="row-span-2 transition-colors rounded w-2/3 bg-white text-center m-auto text-white font-bold hover:text-gray-400 btn text-xl" >
-            {{buttonText}}
+        {{buttonText}}
     </div>
 </div>
 </template>

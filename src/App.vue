@@ -25,5 +25,20 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(240, 240, 240);
 }
+.slide-in-global {
+  opacity: 0;
+  animation: slide forwards 0.8s;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 </style>

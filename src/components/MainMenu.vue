@@ -1,90 +1,48 @@
 <template>
-  <div class="bg-white grid grid-rows-8 shadow-xl rounded-lg w-full md:w-3/4  m-auto p-4 slide-in-global">
-    <ul   id="toolbar" class="flex border-b-4">
+  <div class="bg-white grid grid-rows-8 shadow-xl rounded-lg w-full md:w-3/4 m-auto p-4 slide-in-global">
+    
+    <!-- Toolbar / Nav -->
+    <ul id="toolbar" class="flex border-b-4">
+      <!-- Play Button -->
       <li class="grid -mb-1 mr-1">
-        <a
-          @click="handleToolClick($event)"
-          id="play"
-          class="border-gray-200 bg-white inline-block border-l-4 border-t-4 border-r-4 rounded-t py-2 px-4"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8 text-gray-400 pointer-events-none"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            /></svg
-        ></a>
+        <a id="play" @click="handleToolClick($event)" class="border-gray-200 bg-white inline-block border-l-4 border-t-4 border-r-4 rounded-t py-2 px-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </a>
       </li>
-      <li  class="grid mr-1">
-        <a
-          @click="handleToolClick($event)"
-          id="settings"
-          class="rounded-t border-l-4 border-t-4 border-r-4 border-transparent bg-white inline-block py-2 px-4"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8 text-gray-400 pointer-events-none"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-            /></svg
-        ></a>
-      </li>
+      <!-- Settings Button -->
       <li class="grid mr-1">
-        <a
-          id="about"
-          @click="handleToolClick($event)"
-          class="rounded-t border-transparent border-l-4 border-t-4 border-r-4 bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8 text-gray-400 pointer-events-none"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            /></svg
-        ></a>
+        <a id="settings" @click="handleToolClick($event)"  class="rounded-t border-l-4 border-t-4 border-r-4 border-transparent bg-white inline-block py-2 px-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </a>
+      </li>
+      <!-- About Button -->
+      <li class="grid mr-1">
+        <a id="about" @click="handleToolClick($event)" class="rounded-t border-transparent border-l-4 border-t-4 border-r-4 bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        </a>
       </li>
     </ul>
-    <div
-      class="row-span-8 rounded-bl rounded-br border-l-4 border-b-4 border-r-4"
-    >
+
+    <!-- Viewer --> 
+    <div class="row-span-8 rounded-bl rounded-br border-l-4 border-b-4 border-r-4">
+      
+      <!-- Play View (Game) -->
       <div v-if="currentTabId == 'play'" class="p-3 mt-2 ml-2 text-center">
-          <Game v-on:updateHighScore="updateHighScore" :highScore="this.highScore" :sound="this.isSoundEnabled" v-on:soundToggle="this.isSoundEnabled = !this.isSoundEnabled" v-on:togglePlayStarted="togglePlayStarted()" :tileNum="this.numberOfTiles" />
+        <Game v-on:updateHighScore="updateHighScore" :highScore="this.highScore" :sound="this.isSoundEnabled"
+          v-on:soundToggle="this.isSoundEnabled = !this.isSoundEnabled" v-on:togglePlayStarted="togglePlayStarted()"
+          :tileNum="this.numberOfTiles" />
       </div>
-      <div
-        v-if="currentTabId == 'settings'"
-        class="p-3 mt-2 ml-2 grid grid-rows-8 gap-2"
-      >
+      
+      <!-- Settings View -->
+      <div v-if="currentTabId == 'settings'" class="p-3 mt-2 ml-2 grid grid-rows-8 gap-2">
         <h1 class="mb-4 text-2xl font-bold">Settings ⚙️</h1>
         <div class="border-b">
           <div class="flex items-center justify-left pb-2">
@@ -106,10 +64,7 @@
         <div class="border-b">
           <div class="flex items-center justify-left font-bold">
             SOUND:
-            <Switch
-              :isChecked="this.isSoundEnabled"
-              v-on:checked="toggleSoundEnabled()"
-            />
+            <Switch :isChecked="this.isSoundEnabled" v-on:checked="toggleSoundEnabled()" />
           </div>
           <p class="-mt-1 mb-2 text-gray-400 text-sm">
             <span v-if="this.isSoundEnabled">
@@ -126,17 +81,15 @@
         <div v-if="this.isSoundEnabled">
           <div class="flex items-center justify-left pb-2">
             <label class="font-bold mr-2" for="instrument">INSTRUMENT:</label>
-            <select
-              name="instrument"
-              @change="changeInstrument()"
-              v-model="this.instrumentIndex"
-            >
+            <select name="instrument" @change="changeInstrument()" v-model="this.instrumentIndex">
               <option value="0">Synth 🎹</option>
               <option value="1" disabled>More to come..! 🎸🎻</option>
             </select>
           </div>
         </div>
       </div>
+      
+      <!-- About View -->  
       <div v-if="currentTabId == 'about'" class="p-3 mt-2 ml-2 text-justify">
         <h1 class="mb-4 text-2xl font-bold">Hello! 👋</h1>
         <p>
@@ -185,6 +138,7 @@ export default {
   },
   methods: {
     handleToolClick(event) {
+      // TODO: Change this - instead, just use if and then in :class of element.
       let prevTab = document.getElementById(this.currentTabId);
       let tabListItem = prevTab.parentElement;
       tabListItem.classList.remove("-mb-1");
@@ -195,20 +149,19 @@ export default {
       clickedTool.classList.add("border-gray-200");
       clickedTool.classList.remove("border-transparent");
       clickedToolListParent.classList.add("-mb-1");
-      this.currentTabId = clickedTool.id;     
+      this.currentTabId = clickedTool.id;
     },
     togglePlayStarted() {
-    let toolbar = document.getElementById("toolbar");
-    this.isPlaying = !this.isPlaying;
-    if(this.isPlaying){
-        toolbar.classList.add('pointer-events-none')
-    } else {
-        toolbar.classList.remove('pointer-events-none')
-    }
-
+      let toolbar = document.getElementById("toolbar");
+      this.isPlaying = !this.isPlaying;
+      if (this.isPlaying) {
+        toolbar.classList.add("pointer-events-none");
+      } else {
+        toolbar.classList.remove("pointer-events-none");
+      }
     },
     updateHighScore(score) {
-        this.highScore = score;
+      this.highScore = score;
     },
     toggleSoundEnabled() {
       this.isSoundEnabled = !this.isSoundEnabled;
@@ -216,6 +169,3 @@ export default {
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
